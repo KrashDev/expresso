@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Expresso</title>
+
+    {{!-- reference partials, where we have our head data --}}
+    {{>head}}
+</head>
+<body>
+{{!-- The syntax {{> name}} is for partials, i.e. to include another template: --}}
+{{>bsnavbar}}
+
+<div class="container">
+    {{!-- whereas {{{name}}} is for including data without escaping it. If you wanted the data to be escaped, you'd use {{name}}: see capture for more info --}}
+{{{body}}}
+</div>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+</html>
